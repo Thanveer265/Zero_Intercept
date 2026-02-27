@@ -1,92 +1,76 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { NavLink, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
-    LayoutDashboard, Briefcase, BrainCircuit,
-    FlaskConical, Target,
-    FileText, Settings, ChevronLeft, ChevronRight,
-    Activity
+    Activity, ClipboardList, Brain, Microscope,
+    Target, FileText, Settings
 } from 'lucide-react';
 
 const navItems = [
-    { path: '/', icon: LayoutDashboard, label: 'Dashboard' },
-    { path: '/operations', icon: Briefcase, label: 'Operations' },
-    { path: '/intelligence', icon: BrainCircuit, label: 'Intelligence' },
-    { path: '/simulation', icon: FlaskConical, label: 'Simulation' },
+    { path: '/', icon: Activity, label: 'Dashboard' },
+    { path: '/operations', icon: ClipboardList, label: 'Operations' },
+    { path: '/intelligence', icon: Brain, label: 'Intelligence' },
+    { path: '/simulation', icon: Microscope, label: 'Simulation' },
     { path: '/strategy', icon: Target, label: 'Strategy' },
     { path: '/reports', icon: FileText, label: 'Reports' },
     { path: '/settings', icon: Settings, label: 'Settings' },
 ];
 
 export default function Sidebar() {
-    const [collapsed, setCollapsed] = useState(false);
+    const location = useLocation();
 
     return (
-        <motion.aside
-            animate={{ width: collapsed ? 72 : 260 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="fixed left-0 top-0 h-screen bg-sidebar text-white z-50 flex flex-col shadow-xl"
-        >
-            {/* Header */}
-            <div className="flex items-center gap-3 px-4 h-16 border-b border-white/10">
-                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-light to-accent flex items-center justify-center flex-shrink-0 shadow-lg shadow-primary/30">
-                    <Activity size={20} className="text-white" />
-                </div>
-                <AnimatePresence>
-                    {!collapsed && (
-                        <motion.div
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -10 }}
-                            className="overflow-hidden whitespace-nowrap"
-                        >
-                            <h1 className="text-sm font-bold leading-tight">Hospital</h1>
-                            <p className="text-[10px] text-white/60 leading-tight">Intelligence Platform</p>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-            </div>
-
-            {/* Navigation */}
-            <nav className="flex-1 py-4 px-2 space-y-1">
-                {navItems.map((item) => (
-                    <NavLink
-                        key={item.path}
-                        to={item.path}
-                        end={item.path === '/'}
-                        className={({ isActive }) =>
-                            `flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium cursor-pointer
-               transition-all duration-200 group
-               ${isActive
-                                ? 'bg-sidebar-active text-white shadow-lg shadow-primary/20'
-                                : 'text-white/70 hover:bg-sidebar-hover hover:text-white'
-                            }`
-                        }
-                    >
-                        <item.icon size={20} className="flex-shrink-0" />
-                        <AnimatePresence>
-                            {!collapsed && (
-                                <motion.span
-                                    initial={{ opacity: 0, width: 0 }}
-                                    animate={{ opacity: 1, width: 'auto' }}
-                                    exit={{ opacity: 0, width: 0 }}
-                                    className="overflow-hidden whitespace-nowrap"
-                                >
-                                    {item.label}
-                                </motion.span>
-                            )}
-                        </AnimatePresence>
-                    </NavLink>
-                ))}
-            </nav>
-
-            {/* Collapse Toggle */}
-            <button
-                onClick={() => setCollapsed(!collapsed)}
-                className="flex items-center justify-center h-12 border-t border-white/10 hover:bg-sidebar-hover transition-colors cursor-pointer"
+        <nav className="fixed bottom-0 left-0 right-0 z-[100] px-3 pb-3 pt-0 pointer-events-none">
+            <div
+                className="pointer-events-auto mx-auto max-w-2xl rounded-2xl px-2 py-1.5 flex items-center justify-between gap-0.5
+                    shadow-2xl shadow-black/15 ring-1 ring-white/20"
+                style={{
+                    background: 'linear-gradient(135deg, #042F2E 0%, #0A3D3C 50%, #0D4F4D 100%)',
+                }}
             >
-                {collapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
-            </button>
-        </motion.aside>
+                {navItems.map((item) => {
+                    const isActive = item.path === '/'
+                        ? location.pathname === '/'
+                        : location.pathname.startsWith(item.path);
+
+                    return (
+                        <NavLink
+                            key={item.path}
+                            to={item.path}
+                            end={item.path === '/'}
+                            className="relative flex flex-col items-center justify-center flex-1 py-2 rounded-xl cursor-pointer
+                                transition-colors duration-200 group"
+                        >
+                            {/* Active pill background */}
+                            {isActive && (
+                                <motion.div
+                                    layoutId="bottomnav-active"
+                                    className="absolute inset-1 rounded-xl bg-white/12 shadow-lg shadow-black/10"
+                                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                                />
+                            )}
+
+                            {/* Active top accent */}
+                            {isActive && (
+                                <motion.div
+                                    layoutId="bottomnav-dot"
+                                    className="absolute top-0.5 w-5 h-[2.5px] rounded-full bg-accent-light shadow-sm shadow-accent/40"
+                                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                                />
+                            )}
+
+                            <item.icon
+                                size={20}
+                                className={`relative z-10 transition-colors duration-200
+                                    ${isActive ? 'text-accent-light' : 'text-white/40 group-hover:text-white/70'}`}
+                            />
+                            <span className={`relative z-10 text-[9px] mt-1 font-medium tracking-tight transition-colors duration-200
+                                ${isActive ? 'text-white' : 'text-white/30 group-hover:text-white/60'}`}>
+                                {item.label}
+                            </span>
+                        </NavLink>
+                    );
+                })}
+            </div>
+        </nav>
     );
 }

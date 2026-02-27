@@ -11,9 +11,8 @@ import SettingsPage from './pages/Settings';
 
 export default function App() {
   return (
-    <div className="flex min-h-screen bg-surface">
-      <Sidebar />
-      <main className="flex-1 ml-[260px] p-6 transition-all duration-300">
+    <div className="min-h-screen bg-surface pb-20">
+      <main className="p-6">
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/operations" element={<Operations />} />
@@ -24,6 +23,7 @@ export default function App() {
           <Route path="/settings" element={<SettingsPage />} />
         </Routes>
       </main>
+      <Sidebar />
       <FloatingAssistant />
     </div>
   );
