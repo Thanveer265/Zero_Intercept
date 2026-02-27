@@ -1,0 +1,801 @@
+feedback_id,department,feedback_text,rating,sentiment_score
+1,ICU,Very satisfied with the treatment received.,4,1.0
+2,Emergency,Decent facilities but crowded at times.,3,0.17
+3,Cardiology,Wait time was a bit long but care was fine.,3,0.02
+4,ICU,Would highly recommend this department.,4,0.33
+5,Cardiology,Not enough staff during night shifts.,2,-0.81
+6,Orthopedics,Excellent care and attentive staff.,5,0.47
+7,ICU,Decent facilities but crowded at times.,3,0.12
+8,Neurology,Could improve communication between shifts.,3,0.28
+9,ICU,Clean facility and smooth process.,4,0.37
+10,Emergency,Decent facilities but crowded at times.,3,-0.02
+11,Neurology,Clean facility and smooth process.,4,0.98
+12,ICU,Very satisfied with the treatment received.,5,0.86
+13,Cardiology,Waited too long for treatment.,2,-0.31
+14,Pediatrics,Decent facilities but crowded at times.,3,0.11
+15,Neurology,Decent facilities but crowded at times.,3,-0.05
+16,Emergency,Decent facilities but crowded at times.,3,0.15
+17,ICU,Could improve communication between shifts.,3,0.23
+18,Neurology,Average experience overall.,3,-0.05
+19,Neurology,Staff was compassionate and helpful.,4,0.44
+20,Pediatrics,Average experience overall.,3,0.04
+21,Cardiology,Staff was compassionate and helpful.,5,0.8
+22,Pediatrics,Excellent care and attentive staff.,5,0.34
+23,Pediatrics,Wait time was a bit long but care was fine.,3,-0.03
+24,ICU,Quick response and great follow-up.,4,0.91
+25,Pediatrics,Could improve communication between shifts.,3,-0.01
+26,Orthopedics,The doctor was very thorough and professional.,5,0.75
+27,Emergency,Could improve communication between shifts.,3,0.21
+28,ICU,Would highly recommend this department.,4,0.89
+29,Neurology,Would highly recommend this department.,4,0.93
+30,Emergency,Miscommunication about treatment plan.,2,-0.55
+31,Pediatrics,Billing errors caused unnecessary stress.,1,-0.96
+32,Cardiology,Miscommunication about treatment plan.,2,-0.31
+33,Cardiology,Clean facility and smooth process.,4,1.0
+34,Orthopedics,Very satisfied with the treatment received.,5,0.4
+35,Pediatrics,Very satisfied with the treatment received.,5,0.65
+36,Pediatrics,Impressed with the level of expertise.,5,0.55
+37,Emergency,Waited too long for treatment.,1,-0.66
+38,Cardiology,Miscommunication about treatment plan.,2,-0.61
+39,Emergency,The doctor was very thorough and professional.,4,0.37
+40,ICU,Would highly recommend this department.,5,0.36
+41,Emergency,Impressed with the level of expertise.,5,0.83
+42,Cardiology,Staff was compassionate and helpful.,4,0.71
+43,Orthopedics,Felt rushed during consultation.,2,-0.23
+44,Orthopedics,Staff seemed overworked and inattentive.,2,-0.28
+45,Cardiology,Could improve communication between shifts.,3,-0.01
+46,Emergency,Staff seemed overworked and inattentive.,1,-0.47
+47,Emergency,Wait time was a bit long but care was fine.,3,0.06
+48,Orthopedics,Equipment appeared outdated in some areas.,1,-0.92
+49,Pediatrics,"Service was adequate, nothing exceptional.",3,0.2
+50,ICU,Staff seemed overworked and inattentive.,1,-0.86
+51,ICU,Excellent care and attentive staff.,5,0.33
+52,Orthopedics,Decent facilities but crowded at times.,3,0.19
+53,ICU,Wait time was a bit long but care was fine.,3,0.25
+54,ICU,Average experience overall.,3,0.01
+55,Orthopedics,Staff was compassionate and helpful.,5,0.56
+56,Emergency,Very satisfied with the treatment received.,5,0.56
+57,Pediatrics,Waited too long for treatment.,1,-0.65
+58,ICU,Staff was compassionate and helpful.,4,0.88
+59,ICU,Staff was compassionate and helpful.,5,0.6
+60,Orthopedics,Wait time was a bit long but care was fine.,3,-0.03
+61,Neurology,Very satisfied with the treatment received.,5,0.51
+62,Orthopedics,Average experience overall.,3,0.22
+63,Cardiology,Miscommunication about treatment plan.,2,-0.35
+64,ICU,Average experience overall.,3,0.14
+65,Orthopedics,The doctor was very thorough and professional.,5,0.5
+66,Orthopedics,Could improve communication between shifts.,3,0.01
+67,Orthopedics,Impressed with the level of expertise.,4,0.79
+68,ICU,Would highly recommend this department.,4,0.35
+69,Orthopedics,Clean facility and smooth process.,5,0.89
+70,ICU,Equipment appeared outdated in some areas.,1,-0.17
+71,Emergency,Average experience overall.,3,0.01
+72,ICU,Very satisfied with the treatment received.,5,0.32
+73,Neurology,Would highly recommend this department.,4,0.79
+74,Orthopedics,Waited too long for treatment.,1,-0.7
+75,Neurology,Average experience overall.,3,0.29
+76,Neurology,Felt rushed during consultation.,2,-0.77
+77,Cardiology,Could improve communication between shifts.,3,0.05
+78,Pediatrics,Would highly recommend this department.,5,0.39
+79,Neurology,The doctor was very thorough and professional.,4,0.81
+80,Cardiology,The doctor was very thorough and professional.,5,0.53
+81,Pediatrics,Would highly recommend this department.,5,0.34
+82,Neurology,Not enough staff during night shifts.,2,-0.18
+83,Orthopedics,Equipment appeared outdated in some areas.,1,-0.95
+84,Pediatrics,Excellent care and attentive staff.,5,0.97
+85,Pediatrics,Decent facilities but crowded at times.,3,0.0
+86,Emergency,Quick response and great follow-up.,4,0.86
+87,Orthopedics,The doctor was very thorough and professional.,5,0.54
+88,ICU,Very satisfied with the treatment received.,4,0.91
+89,Neurology,Clean facility and smooth process.,5,0.43
+90,Emergency,Not enough staff during night shifts.,2,-0.59
+91,Cardiology,The doctor was very thorough and professional.,4,0.69
+92,ICU,Quick response and great follow-up.,4,0.35
+93,Cardiology,Follow-up was poorly managed.,1,-0.44
+94,Orthopedics,Staff was compassionate and helpful.,4,0.76
+95,ICU,Clean facility and smooth process.,4,0.57
+96,Neurology,Staff was compassionate and helpful.,4,0.35
+97,Emergency,Quick response and great follow-up.,4,0.83
+98,Neurology,Would highly recommend this department.,4,0.67
+99,Orthopedics,Waited too long for treatment.,2,-0.57
+100,Neurology,Quick response and great follow-up.,4,0.98
+101,Pediatrics,Could improve communication between shifts.,3,0.04
+102,ICU,Impressed with the level of expertise.,4,0.36
+103,Emergency,Not enough staff during night shifts.,2,-0.74
+104,Emergency,Could improve communication between shifts.,3,-0.08
+105,Pediatrics,Clean facility and smooth process.,5,0.57
+106,Emergency,Could improve communication between shifts.,3,-0.06
+107,Pediatrics,Felt rushed during consultation.,2,-0.96
+108,Orthopedics,Excellent care and attentive staff.,4,0.3
+109,ICU,Wait time was a bit long but care was fine.,3,0.19
+110,ICU,Decent facilities but crowded at times.,3,0.23
+111,Pediatrics,Very satisfied with the treatment received.,4,0.39
+112,Emergency,Decent facilities but crowded at times.,3,0.26
+113,Neurology,Quick response and great follow-up.,5,0.81
+114,Emergency,Impressed with the level of expertise.,5,0.61
+115,Pediatrics,Staff seemed overworked and inattentive.,1,-0.25
+116,Emergency,Staff was compassionate and helpful.,4,0.36
+117,Orthopedics,The doctor was very thorough and professional.,4,0.82
+118,Cardiology,Impressed with the level of expertise.,5,0.84
+119,Pediatrics,Billing errors caused unnecessary stress.,1,-0.61
+120,ICU,Would highly recommend this department.,4,0.91
+121,ICU,Follow-up was poorly managed.,2,-0.29
+122,Pediatrics,Clean facility and smooth process.,4,0.98
+123,Neurology,The doctor was very thorough and professional.,4,0.89
+124,Neurology,Miscommunication about treatment plan.,2,-0.25
+125,Cardiology,"Service was adequate, nothing exceptional.",3,0.03
+126,Orthopedics,Equipment appeared outdated in some areas.,1,-0.12
+127,ICU,Staff was compassionate and helpful.,4,0.59
+128,ICU,Miscommunication about treatment plan.,1,-0.9
+129,Orthopedics,Average experience overall.,3,0.1
+130,Orthopedics,Felt rushed during consultation.,1,-1.0
+131,Emergency,Quick response and great follow-up.,4,0.31
+132,Emergency,Could improve communication between shifts.,3,0.08
+133,Neurology,Could improve communication between shifts.,3,0.01
+134,Pediatrics,Miscommunication about treatment plan.,2,-0.5
+135,Orthopedics,Waited too long for treatment.,1,-0.17
+136,Cardiology,Wait time was a bit long but care was fine.,3,-0.09
+137,Pediatrics,Billing errors caused unnecessary stress.,2,-0.22
+138,Orthopedics,Impressed with the level of expertise.,4,0.74
+139,Neurology,Could improve communication between shifts.,3,0.28
+140,Cardiology,Staff seemed overworked and inattentive.,1,-0.77
+141,Neurology,Impressed with the level of expertise.,5,0.88
+142,Pediatrics,Staff was compassionate and helpful.,5,0.75
+143,Cardiology,Could improve communication between shifts.,3,0.04
+144,Orthopedics,"Service was adequate, nothing exceptional.",3,-0.0
+145,Neurology,Clean facility and smooth process.,4,0.48
+146,Orthopedics,Decent facilities but crowded at times.,3,-0.02
+147,ICU,Could improve communication between shifts.,3,0.21
+148,ICU,Miscommunication about treatment plan.,2,-0.31
+149,Orthopedics,Follow-up was poorly managed.,2,-0.88
+150,Cardiology,Average experience overall.,3,0.29
+151,Neurology,Staff was compassionate and helpful.,4,0.43
+152,Neurology,Excellent care and attentive staff.,4,0.75
+153,Cardiology,Impressed with the level of expertise.,5,0.83
+154,Pediatrics,Quick response and great follow-up.,4,0.99
+155,ICU,Quick response and great follow-up.,5,0.85
+156,Cardiology,Wait time was a bit long but care was fine.,3,0.04
+157,Orthopedics,Wait time was a bit long but care was fine.,3,0.29
+158,Pediatrics,Could improve communication between shifts.,3,0.23
+159,Orthopedics,Average experience overall.,3,0.14
+160,Neurology,Excellent care and attentive staff.,4,0.89
+161,Pediatrics,"Service was adequate, nothing exceptional.",3,-0.02
+162,Neurology,Impressed with the level of expertise.,4,0.85
+163,Emergency,Not enough staff during night shifts.,2,-0.13
+164,Emergency,Staff seemed overworked and inattentive.,1,-0.17
+165,Cardiology,Decent facilities but crowded at times.,3,-0.06
+166,Orthopedics,Felt rushed during consultation.,1,-0.68
+167,Pediatrics,Very satisfied with the treatment received.,4,0.55
+168,Orthopedics,Billing errors caused unnecessary stress.,2,-0.96
+169,Emergency,Would highly recommend this department.,5,0.32
+170,Orthopedics,Miscommunication about treatment plan.,1,-0.22
+171,Cardiology,Very satisfied with the treatment received.,4,0.32
+172,Pediatrics,Follow-up was poorly managed.,1,-0.99
+173,ICU,Quick response and great follow-up.,4,0.83
+174,Neurology,Impressed with the level of expertise.,5,0.4
+175,Neurology,Quick response and great follow-up.,4,0.88
+176,Pediatrics,Quick response and great follow-up.,4,0.91
+177,Orthopedics,Quick response and great follow-up.,4,0.36
+178,ICU,Excellent care and attentive staff.,5,0.54
+179,Pediatrics,Could improve communication between shifts.,3,0.3
+180,Cardiology,The doctor was very thorough and professional.,5,0.8
+181,Cardiology,Quick response and great follow-up.,4,0.86
+182,Neurology,Follow-up was poorly managed.,2,-0.2
+183,Cardiology,Felt rushed during consultation.,1,-0.63
+184,Cardiology,Wait time was a bit long but care was fine.,3,0.18
+185,Neurology,Average experience overall.,3,0.26
+186,Emergency,Staff was compassionate and helpful.,5,0.48
+187,Pediatrics,Average experience overall.,3,0.1
+188,Cardiology,Would highly recommend this department.,4,0.76
+189,Cardiology,Not enough staff during night shifts.,1,-0.83
+190,Cardiology,Staff was compassionate and helpful.,4,0.81
+191,Cardiology,Excellent care and attentive staff.,4,0.38
+192,Neurology,Could improve communication between shifts.,3,-0.05
+193,Orthopedics,Clean facility and smooth process.,5,0.56
+194,Pediatrics,"Service was adequate, nothing exceptional.",3,0.19
+195,Orthopedics,Decent facilities but crowded at times.,3,0.05
+196,ICU,Billing errors caused unnecessary stress.,1,-0.24
+197,ICU,Clean facility and smooth process.,4,0.95
+198,Neurology,Waited too long for treatment.,1,-0.41
+199,Neurology,Quick response and great follow-up.,5,0.9
+200,ICU,Equipment appeared outdated in some areas.,2,-0.38
+201,Orthopedics,Not enough staff during night shifts.,1,-0.91
+202,Cardiology,Clean facility and smooth process.,5,0.86
+203,Emergency,Very satisfied with the treatment received.,4,0.34
+204,Cardiology,Quick response and great follow-up.,4,0.56
+205,ICU,Staff was compassionate and helpful.,4,0.39
+206,Emergency,Staff was compassionate and helpful.,5,0.45
+207,Orthopedics,Not enough staff during night shifts.,1,-0.59
+208,Emergency,Quick response and great follow-up.,5,0.93
+209,Neurology,Decent facilities but crowded at times.,3,-0.07
+210,Emergency,Follow-up was poorly managed.,1,-0.7
+211,ICU,Could improve communication between shifts.,3,-0.01
+212,Orthopedics,Wait time was a bit long but care was fine.,3,0.17
+213,ICU,Billing errors caused unnecessary stress.,1,-0.31
+214,Emergency,Decent facilities but crowded at times.,3,-0.04
+215,Pediatrics,Would highly recommend this department.,5,0.41
+216,Neurology,Clean facility and smooth process.,4,0.52
+217,Orthopedics,Wait time was a bit long but care was fine.,3,-0.08
+218,Pediatrics,Clean facility and smooth process.,4,0.88
+219,Orthopedics,"Service was adequate, nothing exceptional.",3,0.17
+220,Neurology,Clean facility and smooth process.,5,0.66
+221,Pediatrics,Follow-up was poorly managed.,1,-0.62
+222,Pediatrics,Very satisfied with the treatment received.,4,0.36
+223,Orthopedics,Decent facilities but crowded at times.,3,0.03
+224,Emergency,The doctor was very thorough and professional.,4,0.66
+225,Orthopedics,"Service was adequate, nothing exceptional.",3,0.19
+226,Orthopedics,Quick response and great follow-up.,5,0.82
+227,Pediatrics,The doctor was very thorough and professional.,4,0.72
+228,Emergency,Clean facility and smooth process.,5,0.37
+229,Neurology,Not enough staff during night shifts.,1,-0.28
+230,Pediatrics,Staff seemed overworked and inattentive.,2,-0.54
+231,Neurology,Staff was compassionate and helpful.,5,0.95
+232,ICU,Would highly recommend this department.,5,0.85
+233,Neurology,Could improve communication between shifts.,3,0.2
+234,Orthopedics,Staff seemed overworked and inattentive.,2,-0.19
+235,Neurology,Equipment appeared outdated in some areas.,1,-0.55
+236,Emergency,Quick response and great follow-up.,4,0.92
+237,ICU,Felt rushed during consultation.,2,-0.82
+238,Cardiology,Clean facility and smooth process.,5,0.78
+239,Orthopedics,Excellent care and attentive staff.,5,1.0
+240,ICU,Equipment appeared outdated in some areas.,1,-0.59
+241,Orthopedics,Excellent care and attentive staff.,5,0.7
+242,Neurology,Clean facility and smooth process.,4,0.6
+243,Emergency,Impressed with the level of expertise.,5,0.54
+244,Neurology,Impressed with the level of expertise.,5,0.65
+245,Emergency,Average experience overall.,3,-0.07
+246,Neurology,Staff was compassionate and helpful.,4,0.7
+247,Pediatrics,Quick response and great follow-up.,5,0.71
+248,Orthopedics,Excellent care and attentive staff.,4,0.69
+249,Neurology,Would highly recommend this department.,4,0.57
+250,ICU,Decent facilities but crowded at times.,3,-0.05
+251,ICU,Decent facilities but crowded at times.,3,0.15
+252,ICU,Very satisfied with the treatment received.,4,0.69
+253,Emergency,Not enough staff during night shifts.,1,-0.91
+254,Cardiology,Very satisfied with the treatment received.,5,0.82
+255,Orthopedics,Excellent care and attentive staff.,4,0.66
+256,Pediatrics,Would highly recommend this department.,5,0.82
+257,ICU,Staff was compassionate and helpful.,4,0.53
+258,Neurology,Wait time was a bit long but care was fine.,3,-0.03
+259,Emergency,Billing errors caused unnecessary stress.,2,-0.7
+260,Neurology,Would highly recommend this department.,4,0.35
+261,Emergency,Not enough staff during night shifts.,2,-0.49
+262,Emergency,The doctor was very thorough and professional.,5,0.77
+263,Orthopedics,Equipment appeared outdated in some areas.,2,-0.44
+264,Orthopedics,Clean facility and smooth process.,4,0.36
+265,Pediatrics,Equipment appeared outdated in some areas.,2,-0.32
+266,Orthopedics,Average experience overall.,3,-0.06
+267,ICU,Could improve communication between shifts.,3,-0.03
+268,Emergency,Average experience overall.,3,0.11
+269,ICU,Very satisfied with the treatment received.,4,0.5
+270,ICU,"Service was adequate, nothing exceptional.",3,-0.02
+271,Cardiology,Would highly recommend this department.,5,0.99
+272,Orthopedics,Not enough staff during night shifts.,2,-0.6
+273,Neurology,Could improve communication between shifts.,3,0.18
+274,Cardiology,Decent facilities but crowded at times.,3,-0.04
+275,Pediatrics,Not enough staff during night shifts.,1,-0.45
+276,Pediatrics,"Service was adequate, nothing exceptional.",3,0.2
+277,Cardiology,Not enough staff during night shifts.,2,-0.75
+278,Emergency,Equipment appeared outdated in some areas.,1,-0.8
+279,Emergency,Quick response and great follow-up.,5,0.83
+280,Orthopedics,Impressed with the level of expertise.,5,0.79
+281,Pediatrics,Could improve communication between shifts.,3,0.18
+282,ICU,Average experience overall.,3,0.02
+283,Orthopedics,Staff was compassionate and helpful.,4,0.42
+284,Neurology,Quick response and great follow-up.,5,0.9
+285,Emergency,Clean facility and smooth process.,5,0.88
+286,ICU,Decent facilities but crowded at times.,3,0.28
+287,Orthopedics,Equipment appeared outdated in some areas.,2,-0.31
+288,Neurology,Could improve communication between shifts.,3,0.23
+289,Neurology,Quick response and great follow-up.,4,0.45
+290,Orthopedics,Would highly recommend this department.,5,0.48
+291,Emergency,Staff was compassionate and helpful.,4,0.71
+292,Emergency,"Service was adequate, nothing exceptional.",3,0.11
+293,Neurology,Excellent care and attentive staff.,4,0.77
+294,Cardiology,Quick response and great follow-up.,5,0.82
+295,Pediatrics,Very satisfied with the treatment received.,5,0.44
+296,Neurology,Waited too long for treatment.,1,-0.93
+297,Emergency,Impressed with the level of expertise.,5,0.93
+298,Neurology,Staff was compassionate and helpful.,5,0.66
+299,Pediatrics,Would highly recommend this department.,5,0.54
+300,Pediatrics,Could improve communication between shifts.,3,0.15
+301,Cardiology,Would highly recommend this department.,4,0.37
+302,Pediatrics,Staff was compassionate and helpful.,5,0.35
+303,Pediatrics,Impressed with the level of expertise.,4,0.86
+304,Neurology,Average experience overall.,3,-0.06
+305,Pediatrics,Felt rushed during consultation.,1,-0.31
+306,Neurology,Could improve communication between shifts.,3,0.06
+307,Orthopedics,Decent facilities but crowded at times.,3,0.13
+308,Cardiology,Excellent care and attentive staff.,4,0.43
+309,Orthopedics,Equipment appeared outdated in some areas.,1,-0.42
+310,Emergency,Miscommunication about treatment plan.,2,-0.92
+311,Cardiology,"Service was adequate, nothing exceptional.",3,0.19
+312,Orthopedics,Very satisfied with the treatment received.,4,0.45
+313,ICU,Follow-up was poorly managed.,2,-0.57
+314,Emergency,Impressed with the level of expertise.,4,1.0
+315,Pediatrics,The doctor was very thorough and professional.,5,0.34
+316,Cardiology,Impressed with the level of expertise.,5,0.58
+317,ICU,Decent facilities but crowded at times.,3,0.08
+318,Orthopedics,Very satisfied with the treatment received.,4,0.53
+319,Neurology,Very satisfied with the treatment received.,5,0.8
+320,Emergency,Quick response and great follow-up.,4,0.78
+321,Cardiology,Decent facilities but crowded at times.,3,0.25
+322,Neurology,Felt rushed during consultation.,1,-0.84
+323,Emergency,Clean facility and smooth process.,4,0.52
+324,Emergency,Follow-up was poorly managed.,1,-0.12
+325,Orthopedics,Impressed with the level of expertise.,5,0.43
+326,ICU,Wait time was a bit long but care was fine.,3,-0.01
+327,ICU,The doctor was very thorough and professional.,5,0.34
+328,Neurology,Would highly recommend this department.,5,0.41
+329,Emergency,Could improve communication between shifts.,3,0.14
+330,Neurology,Follow-up was poorly managed.,1,-0.13
+331,Neurology,"Service was adequate, nothing exceptional.",3,-0.09
+332,Emergency,Would highly recommend this department.,5,0.68
+333,ICU,Clean facility and smooth process.,4,0.93
+334,Cardiology,Not enough staff during night shifts.,2,-0.79
+335,ICU,Excellent care and attentive staff.,5,0.71
+336,Emergency,Could improve communication between shifts.,3,0.18
+337,Neurology,Impressed with the level of expertise.,5,0.42
+338,Emergency,Would highly recommend this department.,4,0.99
+339,Cardiology,Billing errors caused unnecessary stress.,2,-0.85
+340,ICU,Clean facility and smooth process.,5,0.62
+341,Neurology,Not enough staff during night shifts.,1,-0.84
+342,Pediatrics,Wait time was a bit long but care was fine.,3,0.24
+343,Neurology,Staff seemed overworked and inattentive.,2,-0.66
+344,Neurology,Would highly recommend this department.,4,0.3
+345,ICU,Decent facilities but crowded at times.,3,0.24
+346,ICU,Average experience overall.,3,0.03
+347,Orthopedics,Average experience overall.,3,0.28
+348,Emergency,"Service was adequate, nothing exceptional.",3,-0.01
+349,Pediatrics,Excellent care and attentive staff.,5,0.99
+350,Cardiology,Clean facility and smooth process.,5,0.82
+351,Emergency,Decent facilities but crowded at times.,3,0.07
+352,Neurology,Average experience overall.,3,0.14
+353,Pediatrics,Staff was compassionate and helpful.,4,0.79
+354,Emergency,The doctor was very thorough and professional.,4,0.56
+355,Orthopedics,"Service was adequate, nothing exceptional.",3,0.16
+356,ICU,Clean facility and smooth process.,5,0.67
+357,Cardiology,Impressed with the level of expertise.,5,0.45
+358,Pediatrics,Impressed with the level of expertise.,5,0.44
+359,Pediatrics,The doctor was very thorough and professional.,4,0.42
+360,Orthopedics,Staff was compassionate and helpful.,4,0.4
+361,Orthopedics,Quick response and great follow-up.,5,0.81
+362,Emergency,Average experience overall.,3,0.05
+363,Neurology,Could improve communication between shifts.,3,-0.01
+364,Cardiology,Wait time was a bit long but care was fine.,3,0.16
+365,Orthopedics,The doctor was very thorough and professional.,5,0.64
+366,Orthopedics,The doctor was very thorough and professional.,4,0.64
+367,Emergency,The doctor was very thorough and professional.,5,0.52
+368,Neurology,Could improve communication between shifts.,3,0.01
+369,Neurology,Quick response and great follow-up.,5,0.73
+370,Pediatrics,Quick response and great follow-up.,4,0.47
+371,ICU,Decent facilities but crowded at times.,3,0.08
+372,Orthopedics,Wait time was a bit long but care was fine.,3,0.12
+373,Orthopedics,Decent facilities but crowded at times.,3,-0.04
+374,Pediatrics,Would highly recommend this department.,4,0.69
+375,Neurology,Very satisfied with the treatment received.,5,0.54
+376,Neurology,Clean facility and smooth process.,4,0.64
+377,Neurology,Decent facilities but crowded at times.,3,-0.01
+378,Pediatrics,Felt rushed during consultation.,2,-0.88
+379,Pediatrics,"Service was adequate, nothing exceptional.",3,0.05
+380,Pediatrics,Impressed with the level of expertise.,4,0.77
+381,ICU,Miscommunication about treatment plan.,2,-0.95
+382,Orthopedics,The doctor was very thorough and professional.,5,0.76
+383,Orthopedics,Very satisfied with the treatment received.,4,0.61
+384,Orthopedics,Would highly recommend this department.,5,0.97
+385,Neurology,Decent facilities but crowded at times.,3,0.09
+386,Pediatrics,Waited too long for treatment.,2,-0.41
+387,Orthopedics,Impressed with the level of expertise.,4,0.45
+388,Cardiology,Would highly recommend this department.,5,0.33
+389,Orthopedics,Staff was compassionate and helpful.,4,0.57
+390,Emergency,Wait time was a bit long but care was fine.,3,-0.04
+391,Pediatrics,Could improve communication between shifts.,3,-0.02
+392,Cardiology,Staff was compassionate and helpful.,4,0.73
+393,Orthopedics,"Service was adequate, nothing exceptional.",3,-0.02
+394,Pediatrics,Impressed with the level of expertise.,4,0.96
+395,Orthopedics,Would highly recommend this department.,5,0.89
+396,Pediatrics,Could improve communication between shifts.,3,0.21
+397,Orthopedics,Decent facilities but crowded at times.,3,0.03
+398,Emergency,Staff was compassionate and helpful.,4,0.66
+399,Neurology,Decent facilities but crowded at times.,3,0.21
+400,Emergency,Impressed with the level of expertise.,5,0.93
+401,Neurology,Average experience overall.,3,0.16
+402,Cardiology,Average experience overall.,3,-0.07
+403,Cardiology,Average experience overall.,3,0.1
+404,Orthopedics,Average experience overall.,3,0.19
+405,Orthopedics,Quick response and great follow-up.,5,0.97
+406,Cardiology,Impressed with the level of expertise.,5,0.73
+407,Orthopedics,Excellent care and attentive staff.,5,0.65
+408,Pediatrics,Could improve communication between shifts.,3,0.08
+409,ICU,Impressed with the level of expertise.,5,0.91
+410,Orthopedics,"Service was adequate, nothing exceptional.",3,0.2
+411,Cardiology,Felt rushed during consultation.,1,-0.99
+412,Orthopedics,Would highly recommend this department.,5,0.82
+413,Orthopedics,Not enough staff during night shifts.,2,-0.38
+414,ICU,Waited too long for treatment.,2,-0.9
+415,Cardiology,Impressed with the level of expertise.,4,0.38
+416,Orthopedics,"Service was adequate, nothing exceptional.",3,-0.04
+417,Emergency,Excellent care and attentive staff.,4,0.32
+418,Pediatrics,Staff seemed overworked and inattentive.,2,-0.67
+419,Cardiology,Felt rushed during consultation.,1,-0.22
+420,Cardiology,Clean facility and smooth process.,5,0.54
+421,ICU,Very satisfied with the treatment received.,5,0.82
+422,Pediatrics,Follow-up was poorly managed.,2,-0.31
+423,ICU,Decent facilities but crowded at times.,3,0.13
+424,Neurology,Would highly recommend this department.,5,0.69
+425,ICU,Excellent care and attentive staff.,4,0.69
+426,Cardiology,Clean facility and smooth process.,4,0.64
+427,Cardiology,Could improve communication between shifts.,3,0.14
+428,Neurology,Impressed with the level of expertise.,4,0.59
+429,Emergency,"Service was adequate, nothing exceptional.",3,0.22
+430,Pediatrics,Follow-up was poorly managed.,1,-0.37
+431,Pediatrics,"Service was adequate, nothing exceptional.",3,0.08
+432,ICU,Billing errors caused unnecessary stress.,1,-0.25
+433,ICU,Clean facility and smooth process.,4,0.68
+434,Pediatrics,Decent facilities but crowded at times.,3,0.26
+435,Orthopedics,Quick response and great follow-up.,4,0.85
+436,ICU,"Service was adequate, nothing exceptional.",3,0.04
+437,Emergency,"Service was adequate, nothing exceptional.",3,0.03
+438,Emergency,Wait time was a bit long but care was fine.,3,0.2
+439,Pediatrics,Impressed with the level of expertise.,4,0.48
+440,Neurology,Decent facilities but crowded at times.,3,0.13
+441,Cardiology,Very satisfied with the treatment received.,5,0.49
+442,Emergency,Wait time was a bit long but care was fine.,3,0.12
+443,Orthopedics,Staff was compassionate and helpful.,5,0.35
+444,ICU,Waited too long for treatment.,2,-0.77
+445,Orthopedics,Would highly recommend this department.,4,0.54
+446,Orthopedics,Excellent care and attentive staff.,4,0.88
+447,Orthopedics,Follow-up was poorly managed.,2,-0.44
+448,Emergency,Very satisfied with the treatment received.,4,0.89
+449,Neurology,Wait time was a bit long but care was fine.,3,0.27
+450,Emergency,Clean facility and smooth process.,5,0.6
+451,Emergency,Equipment appeared outdated in some areas.,1,-0.11
+452,Pediatrics,Clean facility and smooth process.,5,0.79
+453,Orthopedics,Quick response and great follow-up.,5,0.7
+454,ICU,Decent facilities but crowded at times.,3,0.02
+455,Cardiology,The doctor was very thorough and professional.,4,0.79
+456,Cardiology,Staff seemed overworked and inattentive.,2,-0.27
+457,Emergency,"Service was adequate, nothing exceptional.",3,-0.04
+458,Orthopedics,Follow-up was poorly managed.,2,-0.94
+459,Cardiology,Quick response and great follow-up.,4,0.36
+460,Emergency,Waited too long for treatment.,1,-0.61
+461,Orthopedics,Wait time was a bit long but care was fine.,3,-0.01
+462,Orthopedics,Very satisfied with the treatment received.,4,0.96
+463,ICU,Quick response and great follow-up.,4,1.0
+464,Cardiology,Felt rushed during consultation.,2,-0.52
+465,Emergency,Impressed with the level of expertise.,4,0.86
+466,Neurology,Not enough staff during night shifts.,2,-0.43
+467,Cardiology,Impressed with the level of expertise.,5,0.59
+468,Pediatrics,Clean facility and smooth process.,4,0.32
+469,Neurology,Clean facility and smooth process.,4,0.68
+470,Cardiology,Clean facility and smooth process.,4,0.94
+471,Cardiology,Clean facility and smooth process.,5,0.68
+472,Pediatrics,Could improve communication between shifts.,3,0.08
+473,Neurology,Staff seemed overworked and inattentive.,2,-0.21
+474,Pediatrics,Staff seemed overworked and inattentive.,2,-0.4
+475,Neurology,Staff seemed overworked and inattentive.,2,-0.76
+476,Orthopedics,Clean facility and smooth process.,5,0.38
+477,Emergency,Impressed with the level of expertise.,5,0.59
+478,ICU,Billing errors caused unnecessary stress.,2,-0.52
+479,Cardiology,Clean facility and smooth process.,5,0.46
+480,Neurology,Wait time was a bit long but care was fine.,3,0.1
+481,Orthopedics,Clean facility and smooth process.,5,0.73
+482,Emergency,Quick response and great follow-up.,5,0.5
+483,ICU,Very satisfied with the treatment received.,5,0.43
+484,Orthopedics,Staff was compassionate and helpful.,5,0.73
+485,Emergency,Could improve communication between shifts.,3,-0.06
+486,Orthopedics,Felt rushed during consultation.,2,-0.8
+487,Cardiology,"Service was adequate, nothing exceptional.",3,0.16
+488,ICU,Clean facility and smooth process.,4,0.74
+489,Emergency,Wait time was a bit long but care was fine.,3,0.04
+490,Emergency,Not enough staff during night shifts.,1,-0.85
+491,Pediatrics,Quick response and great follow-up.,5,0.51
+492,Pediatrics,Could improve communication between shifts.,3,-0.03
+493,ICU,Very satisfied with the treatment received.,5,0.83
+494,Emergency,Could improve communication between shifts.,3,0.12
+495,ICU,Clean facility and smooth process.,5,0.76
+496,Emergency,Clean facility and smooth process.,5,0.51
+497,Pediatrics,Would highly recommend this department.,5,0.32
+498,Orthopedics,Would highly recommend this department.,4,0.7
+499,Orthopedics,Would highly recommend this department.,5,0.59
+500,Orthopedics,Excellent care and attentive staff.,5,0.39
+501,ICU,Average experience overall.,3,-0.04
+502,Emergency,Excellent care and attentive staff.,5,0.48
+503,Cardiology,The doctor was very thorough and professional.,5,0.37
+504,ICU,Could improve communication between shifts.,3,-0.01
+505,Pediatrics,Very satisfied with the treatment received.,5,0.89
+506,Emergency,"Service was adequate, nothing exceptional.",3,0.26
+507,Neurology,Average experience overall.,3,0.14
+508,Emergency,Clean facility and smooth process.,4,1.0
+509,Orthopedics,Average experience overall.,3,0.24
+510,Emergency,Clean facility and smooth process.,5,0.73
+511,Cardiology,Very satisfied with the treatment received.,5,0.78
+512,Cardiology,Equipment appeared outdated in some areas.,2,-0.79
+513,Orthopedics,Staff was compassionate and helpful.,4,0.81
+514,Emergency,Very satisfied with the treatment received.,5,0.65
+515,Emergency,Could improve communication between shifts.,3,-0.06
+516,Cardiology,Very satisfied with the treatment received.,5,0.93
+517,Emergency,Clean facility and smooth process.,4,0.5
+518,Neurology,Average experience overall.,3,0.11
+519,ICU,Wait time was a bit long but care was fine.,3,0.05
+520,Emergency,Not enough staff during night shifts.,1,-0.46
+521,Orthopedics,Decent facilities but crowded at times.,3,-0.08
+522,Cardiology,Very satisfied with the treatment received.,5,0.88
+523,Cardiology,Could improve communication between shifts.,3,0.19
+524,ICU,"Service was adequate, nothing exceptional.",3,0.23
+525,Pediatrics,Excellent care and attentive staff.,5,0.81
+526,Orthopedics,Clean facility and smooth process.,4,0.47
+527,Neurology,Excellent care and attentive staff.,5,0.55
+528,Neurology,Excellent care and attentive staff.,4,0.89
+529,Orthopedics,Excellent care and attentive staff.,4,0.42
+530,Neurology,Felt rushed during consultation.,1,-0.27
+531,Orthopedics,Quick response and great follow-up.,5,0.46
+532,Orthopedics,Average experience overall.,3,-0.08
+533,ICU,Impressed with the level of expertise.,4,0.53
+534,Emergency,Quick response and great follow-up.,5,0.45
+535,ICU,Clean facility and smooth process.,5,0.71
+536,Emergency,Equipment appeared outdated in some areas.,1,-0.13
+537,Pediatrics,Quick response and great follow-up.,5,0.89
+538,Emergency,Clean facility and smooth process.,5,0.51
+539,Orthopedics,Impressed with the level of expertise.,4,0.8
+540,Pediatrics,Could improve communication between shifts.,3,-0.04
+541,Cardiology,Equipment appeared outdated in some areas.,1,-0.77
+542,Neurology,Impressed with the level of expertise.,5,0.36
+543,Emergency,"Service was adequate, nothing exceptional.",3,0.18
+544,Orthopedics,Staff was compassionate and helpful.,4,0.98
+545,ICU,Average experience overall.,3,0.25
+546,ICU,Excellent care and attentive staff.,5,0.39
+547,Neurology,Wait time was a bit long but care was fine.,3,-0.03
+548,Pediatrics,Clean facility and smooth process.,5,0.73
+549,Pediatrics,Clean facility and smooth process.,5,0.56
+550,Pediatrics,Wait time was a bit long but care was fine.,3,0.03
+551,Neurology,Would highly recommend this department.,5,0.42
+552,Cardiology,Could improve communication between shifts.,3,0.04
+553,Cardiology,The doctor was very thorough and professional.,5,1.0
+554,ICU,Could improve communication between shifts.,3,0.1
+555,Orthopedics,Would highly recommend this department.,4,0.45
+556,Neurology,The doctor was very thorough and professional.,4,0.74
+557,ICU,Would highly recommend this department.,5,0.85
+558,Neurology,Average experience overall.,3,-0.03
+559,Cardiology,Quick response and great follow-up.,5,0.5
+560,Cardiology,Could improve communication between shifts.,3,0.02
+561,Pediatrics,Wait time was a bit long but care was fine.,3,0.15
+562,Pediatrics,Miscommunication about treatment plan.,2,-0.86
+563,Cardiology,Quick response and great follow-up.,5,0.78
+564,Cardiology,Very satisfied with the treatment received.,5,0.34
+565,ICU,Average experience overall.,3,0.22
+566,Orthopedics,Waited too long for treatment.,2,-0.14
+567,Neurology,Decent facilities but crowded at times.,3,0.22
+568,Neurology,Follow-up was poorly managed.,2,-0.91
+569,Cardiology,Clean facility and smooth process.,5,0.92
+570,Emergency,"Service was adequate, nothing exceptional.",3,-0.08
+571,ICU,Miscommunication about treatment plan.,1,-0.2
+572,Neurology,Clean facility and smooth process.,5,0.37
+573,Emergency,Billing errors caused unnecessary stress.,1,-0.88
+574,ICU,Average experience overall.,3,-0.06
+575,ICU,Billing errors caused unnecessary stress.,1,-0.43
+576,Orthopedics,Wait time was a bit long but care was fine.,3,-0.05
+577,Cardiology,Would highly recommend this department.,4,0.54
+578,Emergency,Very satisfied with the treatment received.,5,0.64
+579,Orthopedics,Excellent care and attentive staff.,4,0.78
+580,Neurology,Very satisfied with the treatment received.,4,0.43
+581,Pediatrics,Quick response and great follow-up.,4,0.79
+582,Orthopedics,Clean facility and smooth process.,5,0.59
+583,Neurology,Quick response and great follow-up.,5,0.88
+584,Pediatrics,"Service was adequate, nothing exceptional.",3,-0.09
+585,Cardiology,Would highly recommend this department.,4,0.42
+586,Neurology,Average experience overall.,3,0.02
+587,Cardiology,Would highly recommend this department.,5,0.75
+588,ICU,"Service was adequate, nothing exceptional.",3,0.25
+589,ICU,Staff was compassionate and helpful.,4,0.99
+590,Pediatrics,Impressed with the level of expertise.,4,0.72
+591,Cardiology,Impressed with the level of expertise.,5,0.96
+592,Orthopedics,Decent facilities but crowded at times.,3,0.13
+593,Neurology,"Service was adequate, nothing exceptional.",3,0.3
+594,Neurology,Staff was compassionate and helpful.,5,0.49
+595,Emergency,Very satisfied with the treatment received.,4,0.33
+596,Cardiology,Clean facility and smooth process.,4,0.65
+597,Cardiology,Could improve communication between shifts.,3,0.26
+598,Orthopedics,Quick response and great follow-up.,4,0.42
+599,Orthopedics,Impressed with the level of expertise.,5,0.97
+600,Pediatrics,Clean facility and smooth process.,5,0.45
+601,Emergency,Very satisfied with the treatment received.,4,0.8
+602,Neurology,Very satisfied with the treatment received.,5,0.79
+603,Cardiology,Felt rushed during consultation.,2,-0.34
+604,Neurology,Wait time was a bit long but care was fine.,3,-0.07
+605,Cardiology,Would highly recommend this department.,4,0.76
+606,ICU,Wait time was a bit long but care was fine.,3,0.08
+607,Pediatrics,Clean facility and smooth process.,5,0.73
+608,Pediatrics,Clean facility and smooth process.,5,0.44
+609,ICU,Staff was compassionate and helpful.,5,0.84
+610,ICU,Wait time was a bit long but care was fine.,3,0.04
+611,Pediatrics,Impressed with the level of expertise.,4,0.75
+612,Emergency,Decent facilities but crowded at times.,3,-0.06
+613,Emergency,"Service was adequate, nothing exceptional.",3,0.16
+614,Neurology,Decent facilities but crowded at times.,3,0.13
+615,Cardiology,Staff was compassionate and helpful.,4,0.5
+616,Cardiology,Decent facilities but crowded at times.,3,0.04
+617,Neurology,Quick response and great follow-up.,5,0.64
+618,Cardiology,Decent facilities but crowded at times.,3,0.18
+619,ICU,Average experience overall.,3,-0.07
+620,ICU,Impressed with the level of expertise.,5,0.62
+621,Cardiology,Wait time was a bit long but care was fine.,3,0.18
+622,Neurology,Follow-up was poorly managed.,2,-0.81
+623,Neurology,Staff was compassionate and helpful.,4,0.48
+624,Pediatrics,Not enough staff during night shifts.,2,-0.36
+625,Cardiology,Quick response and great follow-up.,5,0.67
+626,Cardiology,Wait time was a bit long but care was fine.,3,0.08
+627,Orthopedics,Wait time was a bit long but care was fine.,3,-0.09
+628,Emergency,Decent facilities but crowded at times.,3,-0.06
+629,ICU,Impressed with the level of expertise.,5,0.39
+630,Cardiology,Waited too long for treatment.,2,-1.0
+631,Emergency,Could improve communication between shifts.,3,0.13
+632,Emergency,Wait time was a bit long but care was fine.,3,0.04
+633,Emergency,Equipment appeared outdated in some areas.,1,-0.93
+634,Cardiology,Wait time was a bit long but care was fine.,3,-0.05
+635,Emergency,Clean facility and smooth process.,4,0.47
+636,Pediatrics,Impressed with the level of expertise.,4,0.52
+637,Neurology,Would highly recommend this department.,5,0.69
+638,ICU,Wait time was a bit long but care was fine.,3,0.09
+639,Orthopedics,Very satisfied with the treatment received.,5,0.46
+640,ICU,Quick response and great follow-up.,4,0.54
+641,Orthopedics,Could improve communication between shifts.,3,0.01
+642,Cardiology,Staff seemed overworked and inattentive.,1,-0.17
+643,ICU,Very satisfied with the treatment received.,5,0.36
+644,Orthopedics,Decent facilities but crowded at times.,3,0.02
+645,Pediatrics,Average experience overall.,3,-0.04
+646,Orthopedics,Wait time was a bit long but care was fine.,3,-0.07
+647,Cardiology,Waited too long for treatment.,1,-0.1
+648,Neurology,Follow-up was poorly managed.,1,-0.78
+649,Cardiology,Equipment appeared outdated in some areas.,1,-0.23
+650,Neurology,Would highly recommend this department.,4,0.45
+651,Cardiology,Quick response and great follow-up.,5,0.36
+652,Cardiology,The doctor was very thorough and professional.,4,0.45
+653,Cardiology,Average experience overall.,3,0.1
+654,Cardiology,Decent facilities but crowded at times.,3,0.08
+655,Pediatrics,Average experience overall.,3,0.14
+656,Orthopedics,Would highly recommend this department.,5,0.52
+657,ICU,Felt rushed during consultation.,2,-0.84
+658,Neurology,"Service was adequate, nothing exceptional.",3,0.29
+659,Orthopedics,Impressed with the level of expertise.,5,0.36
+660,ICU,Staff seemed overworked and inattentive.,2,-0.75
+661,ICU,Would highly recommend this department.,4,0.31
+662,Orthopedics,Waited too long for treatment.,1,-0.64
+663,ICU,Excellent care and attentive staff.,4,0.76
+664,Pediatrics,Very satisfied with the treatment received.,4,0.77
+665,ICU,Impressed with the level of expertise.,4,0.87
+666,Orthopedics,Miscommunication about treatment plan.,2,-0.16
+667,Neurology,Impressed with the level of expertise.,5,0.78
+668,Cardiology,Would highly recommend this department.,5,0.66
+669,Orthopedics,Could improve communication between shifts.,3,0.09
+670,Cardiology,The doctor was very thorough and professional.,5,0.72
+671,Orthopedics,"Service was adequate, nothing exceptional.",3,0.26
+672,Emergency,Wait time was a bit long but care was fine.,3,-0.01
+673,Orthopedics,Decent facilities but crowded at times.,3,0.19
+674,Neurology,Wait time was a bit long but care was fine.,3,0.22
+675,Orthopedics,Impressed with the level of expertise.,5,0.38
+676,Pediatrics,Staff was compassionate and helpful.,5,0.74
+677,Pediatrics,Staff was compassionate and helpful.,5,0.55
+678,Emergency,Waited too long for treatment.,1,-0.51
+679,Pediatrics,Miscommunication about treatment plan.,2,-0.97
+680,Orthopedics,Wait time was a bit long but care was fine.,3,0.24
+681,Pediatrics,Clean facility and smooth process.,5,0.35
+682,Emergency,Decent facilities but crowded at times.,3,0.27
+683,Orthopedics,Clean facility and smooth process.,4,0.73
+684,ICU,Clean facility and smooth process.,5,0.67
+685,Emergency,Equipment appeared outdated in some areas.,1,-0.62
+686,Emergency,Quick response and great follow-up.,5,0.82
+687,Orthopedics,"Service was adequate, nothing exceptional.",3,-0.07
+688,Emergency,Quick response and great follow-up.,4,0.88
+689,Neurology,Quick response and great follow-up.,5,0.75
+690,Cardiology,"Service was adequate, nothing exceptional.",3,0.18
+691,ICU,Wait time was a bit long but care was fine.,3,0.29
+692,Emergency,The doctor was very thorough and professional.,4,0.33
+693,ICU,The doctor was very thorough and professional.,4,0.46
+694,Pediatrics,Average experience overall.,3,-0.07
+695,Neurology,Quick response and great follow-up.,5,0.83
+696,Orthopedics,Felt rushed during consultation.,2,-0.46
+697,Orthopedics,Could improve communication between shifts.,3,0.06
+698,Orthopedics,Miscommunication about treatment plan.,1,-0.65
+699,Neurology,Average experience overall.,3,-0.03
+700,Pediatrics,Could improve communication between shifts.,3,0.03
+701,Cardiology,Staff was compassionate and helpful.,5,0.54
+702,Cardiology,Impressed with the level of expertise.,4,0.87
+703,Orthopedics,Average experience overall.,3,0.17
+704,Pediatrics,Decent facilities but crowded at times.,3,0.15
+705,Emergency,Could improve communication between shifts.,3,-0.04
+706,ICU,Staff seemed overworked and inattentive.,1,-0.81
+707,Emergency,Wait time was a bit long but care was fine.,3,0.27
+708,ICU,Average experience overall.,3,0.26
+709,Pediatrics,"Service was adequate, nothing exceptional.",3,0.2
+710,Emergency,Could improve communication between shifts.,3,0.14
+711,ICU,Waited too long for treatment.,2,-0.1
+712,Orthopedics,Average experience overall.,3,0.13
+713,Cardiology,Staff was compassionate and helpful.,5,0.47
+714,ICU,The doctor was very thorough and professional.,4,0.4
+715,Pediatrics,Staff was compassionate and helpful.,4,0.86
+716,Orthopedics,Impressed with the level of expertise.,4,0.99
+717,Orthopedics,Follow-up was poorly managed.,1,-0.53
+718,Pediatrics,"Service was adequate, nothing exceptional.",3,0.28
+719,Neurology,Wait time was a bit long but care was fine.,3,-0.05
+720,Pediatrics,Would highly recommend this department.,4,0.99
+721,Neurology,Staff was compassionate and helpful.,4,0.33
+722,Orthopedics,The doctor was very thorough and professional.,4,0.59
+723,Neurology,Staff was compassionate and helpful.,4,0.8
+724,ICU,Quick response and great follow-up.,5,0.36
+725,Orthopedics,Would highly recommend this department.,4,1.0
+726,Emergency,Staff was compassionate and helpful.,5,0.59
+727,Pediatrics,Would highly recommend this department.,4,0.88
+728,ICU,Decent facilities but crowded at times.,3,-0.08
+729,Emergency,Wait time was a bit long but care was fine.,3,0.23
+730,Neurology,Clean facility and smooth process.,5,0.78
+731,Emergency,Decent facilities but crowded at times.,3,-0.07
+732,Emergency,Waited too long for treatment.,1,-0.74
+733,Emergency,Clean facility and smooth process.,4,0.92
+734,Neurology,Could improve communication between shifts.,3,0.1
+735,Pediatrics,"Service was adequate, nothing exceptional.",3,0.21
+736,Emergency,Wait time was a bit long but care was fine.,3,0.18
+737,Cardiology,Very satisfied with the treatment received.,5,0.65
+738,Orthopedics,The doctor was very thorough and professional.,5,0.37
+739,Pediatrics,Could improve communication between shifts.,3,0.11
+740,Neurology,Average experience overall.,3,0.25
+741,Pediatrics,Could improve communication between shifts.,3,0.28
+742,Pediatrics,Quick response and great follow-up.,4,0.52
+743,Neurology,Waited too long for treatment.,2,-0.12
+744,Emergency,Average experience overall.,3,0.09
+745,Emergency,Waited too long for treatment.,1,-0.1
+746,ICU,Felt rushed during consultation.,1,-0.37
+747,Neurology,The doctor was very thorough and professional.,5,0.74
+748,Emergency,Follow-up was poorly managed.,1,-0.98
+749,Cardiology,Would highly recommend this department.,5,0.4
+750,Cardiology,Wait time was a bit long but care was fine.,3,0.02
+751,Emergency,"Service was adequate, nothing exceptional.",3,0.14
+752,Orthopedics,Decent facilities but crowded at times.,3,-0.01
+753,Cardiology,Excellent care and attentive staff.,5,0.37
+754,Cardiology,Very satisfied with the treatment received.,4,0.74
+755,ICU,Impressed with the level of expertise.,5,0.35
+756,Emergency,Very satisfied with the treatment received.,5,0.78
+757,Orthopedics,Average experience overall.,3,0.24
+758,Cardiology,Decent facilities but crowded at times.,3,0.17
+759,ICU,"Service was adequate, nothing exceptional.",3,0.27
+760,Pediatrics,Staff was compassionate and helpful.,4,0.66
+761,Pediatrics,Impressed with the level of expertise.,4,0.46
+762,Cardiology,Staff was compassionate and helpful.,4,0.53
+763,Orthopedics,Staff was compassionate and helpful.,5,0.83
+764,ICU,Quick response and great follow-up.,5,0.9
+765,Neurology,Miscommunication about treatment plan.,1,-0.36
+766,Pediatrics,Excellent care and attentive staff.,5,0.71
+767,Cardiology,Not enough staff during night shifts.,1,-0.22
+768,Emergency,Waited too long for treatment.,1,-0.61
+769,Neurology,Billing errors caused unnecessary stress.,2,-0.78
+770,Orthopedics,Clean facility and smooth process.,4,0.89
+771,Pediatrics,Waited too long for treatment.,2,-0.57
+772,Cardiology,"Service was adequate, nothing exceptional.",3,0.23
+773,ICU,Equipment appeared outdated in some areas.,2,-0.13
+774,Orthopedics,Follow-up was poorly managed.,1,-0.39
+775,Cardiology,Impressed with the level of expertise.,5,0.37
+776,Orthopedics,"Service was adequate, nothing exceptional.",3,0.29
+777,Emergency,Would highly recommend this department.,4,0.37
+778,Neurology,Average experience overall.,3,0.15
+779,Pediatrics,Clean facility and smooth process.,5,0.64
+780,Pediatrics,Billing errors caused unnecessary stress.,1,-0.67
+781,Cardiology,Would highly recommend this department.,5,0.35
+782,Emergency,Wait time was a bit long but care was fine.,3,-0.02
+783,Pediatrics,Decent facilities but crowded at times.,3,0.16
+784,Pediatrics,Impressed with the level of expertise.,4,0.65
+785,Neurology,Decent facilities but crowded at times.,3,0.2
+786,ICU,Average experience overall.,3,-0.02
+787,ICU,Would highly recommend this department.,5,0.45
+788,Emergency,"Service was adequate, nothing exceptional.",3,-0.07
+789,ICU,Quick response and great follow-up.,4,0.7
+790,Cardiology,Quick response and great follow-up.,5,0.95
+791,Orthopedics,Staff was compassionate and helpful.,4,0.37
+792,Cardiology,Clean facility and smooth process.,5,0.53
+793,Emergency,Clean facility and smooth process.,5,0.68
+794,Emergency,Decent facilities but crowded at times.,3,-0.08
+795,Cardiology,Wait time was a bit long but care was fine.,3,0.17
+796,Orthopedics,Decent facilities but crowded at times.,3,-0.1
+797,Orthopedics,Very satisfied with the treatment received.,4,0.66
+798,ICU,Could improve communication between shifts.,3,0.25
+799,Pediatrics,Wait time was a bit long but care was fine.,3,0.05
+800,Orthopedics,Could improve communication between shifts.,3,-0.07

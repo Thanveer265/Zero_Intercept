@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Hospital Medical Theme ── */
+  --color-primary: #0F766E;
+  --color-primary-light: #14B8A6;
+  --color-primary-dark: #0D5F58;
+  --color-secondary: #0284C7;
+  --color-secondary-light: #38BDF8;
+  --color-accent: #10B981;
+  --color-accent-light: #34D399;
+  --color-warning: #D97706;
+  --color-warning-light: #FBBF24;
+  --color-critical: #DC2626;
+  --color-critical-light: #F87171;
+
+  /* Surfaces */
+  --color-surface: #F0FDFA;
+  --color-surface-card: #FFFFFF;
+  --color-surface-warm: #F0FDF4;
+
+  /* Text */
+  --color-text-primary: #134E4A;
+  --color-text-secondary: #5F7A76;
+  --color-text-muted: #94A3B8;
+  --color-border: #CCFBF1;
+
+  /* Sidebar */
+  --color-sidebar: #042F2E;
+  --color-sidebar-hover: #0F3D3C;
+  --color-sidebar-active: #0F766E;
+
+  /* Fonts */
+  --font-family-display: 'Plus Jakarta Sans', sans-serif;
+  --font-family-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-family-body);
+    background: linear-gradient(135deg, #F0FDFA 0%, #ECFDF5 50%, #F0F9FF 100%);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-family-display);
+    color: var(--color-text-primary);
+  }
+}
+
+/* Custom scrollbar - teal themed */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #99F6E4;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5EEAD4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Medical accent glow for cards */
+@layer utilities {
+  .medical-glow {
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  }
+
+  .medical-glow-hover:hover {
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.15), 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+}
