@@ -94,3 +94,96 @@ html {
     box-shadow: 0 0 30px rgba(20, 184, 166, 0.15), 0 4px 12px rgba(0, 0, 0, 0.06);
   }
 }
+
+/* Markdown styles for AI Assistant chat */
+.markdown-chat p {
+  margin-bottom: 0.5em;
+}
+
+.markdown-chat p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-chat strong {
+  font-weight: 700;
+  color: inherit;
+}
+
+.markdown-chat em {
+  font-style: italic;
+}
+
+.markdown-chat ul,
+.markdown-chat ol {
+  margin: 0.4em 0;
+  padding-left: 1.4em;
+}
+
+.markdown-chat li {
+  margin-bottom: 0.15em;
+}
+
+.markdown-chat h1,
+.markdown-chat h2,
+.markdown-chat h3,
+.markdown-chat h4 {
+  font-weight: 700;
+  margin: 0.6em 0 0.3em;
+}
+
+.markdown-chat h1 { font-size: 1.2em; }
+.markdown-chat h2 { font-size: 1.1em; }
+.markdown-chat h3 { font-size: 1.05em; }
+
+.markdown-chat code {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  font-size: 0.875em;
+  font-family: 'Fira Code', monospace;
+}
+
+.markdown-chat pre {
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  padding: 0.75em;
+  overflow-x: auto;
+  margin: 0.5em 0;
+}
+
+.markdown-chat pre code {
+  background: none;
+  padding: 0;
+}
+
+.markdown-chat table {
+  border-collapse: collapse;
+  margin: 0.5em 0;
+  width: 100%;
+  font-size: 0.875em;
+}
+
+.markdown-chat th,
+.markdown-chat td {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.35em 0.6em;
+  text-align: left;
+}
+
+.markdown-chat th {
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.markdown-chat blockquote {
+  border-left: 3px solid var(--color-primary);
+  padding-left: 0.75em;
+  margin: 0.5em 0;
+  opacity: 0.85;
+}
+
+.markdown-chat hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0.5em 0;
+}

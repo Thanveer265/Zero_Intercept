@@ -30,9 +30,9 @@
   },
   "appearance": {
     "theme": "dark",
-    "compact_mode": false,
+    "compact_mode": true,
     "animation_speed": 100,
-    "accent_color": "#14B8A6"
+    "accent_color": "#EC4899"
   },
   "security": {
     "ip_restriction": false,

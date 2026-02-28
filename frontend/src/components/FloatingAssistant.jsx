@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, Bot, User, Stethoscope, Sparkles } from 'lucide-react';
 import { queryAssistant } from '../services/api';
@@ -111,7 +112,9 @@ export default function FloatingAssistant() {
                                     <div className={`max-w-[80%] ${msg.role === 'user'
                                         ? 'bg-primary text-white rounded-2xl rounded-br-md px-3.5 py-2.5'
                                         : 'bg-surface rounded-2xl rounded-bl-md px-3.5 py-2.5'}`}>
-                                        <p className="text-[13px] leading-relaxed whitespace-pre-wrap">{msg.content}</p>
+                                        <div className="text-[13px] leading-relaxed markdown-chat">
+                                            <ReactMarkdown>{msg.content}</ReactMarkdown>
+                                        </div>
                                         {msg.insight && (
                                             <p className="text-[11px] mt-1.5 opacity-70 italic">💡 {msg.insight}</p>
                                         )}
