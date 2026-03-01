@@ -14,7 +14,7 @@ load_dotenv()
 router = APIRouter(prefix="/api/predictive", tags=["Predictive Analytics"])
 
 # MongoDB
-MONGO_URI = os.getenv("mongo_db", "")
+MONGO_URI = os.getenv("MONGO_URI") or os.getenv("mongo_db") or ""
 client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000) if MONGO_URI else None
 mdb = client["zero_intercept"] if client is not None else None
 bookings_col = mdb["appointment_bookings"] if mdb is not None else None

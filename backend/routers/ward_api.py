@@ -14,7 +14,7 @@ load_dotenv()
 router = APIRouter(prefix="/api/ward", tags=["Ward Management"])
 
 # MongoDB
-MONGO_URI = os.getenv("mongo_db", "")
+MONGO_URI = os.getenv("MONGO_URI") or os.getenv("mongo_db") or ""
 client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000) if MONGO_URI else None
 mdb = client["zero_intercept"] if client is not None else None
 wards_col = mdb["wards"] if mdb is not None else None
@@ -313,5 +313,5 @@ def seed_wards():
     print(f"  [OK] Seeded {len(default_wards)} wards")
 
 
-# Auto-seed on import
-seed_wards()
+# Manual seed (comment out if not needed)
+# seed_wards()

@@ -11,7 +11,7 @@ load_dotenv()
 router = APIRouter(prefix="/api/optimization", tags=["Optimization Engine"])
 
 # MongoDB
-MONGO_URI = os.getenv("mongo_db", "")
+MONGO_URI = os.getenv("MONGO_URI") or os.getenv("mongo_db") or ""
 client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000) if MONGO_URI else None
 mdb = client["zero_intercept"] if client is not None else None
 admissions_col = mdb["ward_admissions"] if mdb is not None else None

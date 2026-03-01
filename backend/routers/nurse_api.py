@@ -15,7 +15,7 @@ load_dotenv()
 router = APIRouter(prefix="/api/nurse", tags=["Nurse API"])
 
 # MongoDB
-MONGO_URI = os.getenv("mongo_db", "")
+MONGO_URI = os.getenv("MONGO_URI") or os.getenv("mongo_db") or ""
 client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000) if MONGO_URI else None
 mdb = client["zero_intercept"] if client is not None else None
 vitals_col = mdb["patient_vitals"] if mdb is not None else None

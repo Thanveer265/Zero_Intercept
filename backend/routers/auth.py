@@ -19,28 +19,27 @@ load_dotenv()
 router = APIRouter(prefix="/api/auth", tags=["Authentication"])
 
 # ---------- MongoDB connection ----------
-MONGO_URI = os.getenv("mongo_db", "")
+# MongoDB
+MONGO_URI = os.getenv("MONGO_URI") or os.getenv("mongo_db") or ""
 JWT_SECRET = os.getenv("JWT_SECRET", "zero-intercept-secret-2026")
 
-client = None
+client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000) if MONGO_URI else None
 db = None
 users_collection = None
 notifications_collection = None
 
-if MONGO_URI:
+if client:
     try:
-        client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000)
-        client.server_info()  # Test connection
+        # We'll skip server_info() at top level to avoid cold start timeouts
         db = client["zero_intercept"]
         users_collection = db["users"]
         notifications_collection = db["notifications"]
         # Create unique index on email
         users_collection.create_index("email", unique=True)
-        print("[OK] MongoDB connected successfully")
     except Exception as e:
-        print(f"[WARN] MongoDB connection failed: {e}")
+        print(f"[WARN] MongoDB connection setup failed: {e}")
 else:
-    print("[WARN] No MongoDB URI found in .env")
+    print("[WARN] No MongoDB URI found in environment")
 
 
 # ---------- Request/Response models ----------
@@ -424,5 +423,5 @@ def get_me(current_user: dict = Depends(_get_current_user)):
     return current_user
 
 
-# Run seed on import
-seed_users_from_staff()
+# Manual seed (comment out if not needed)
+# seed_users_from_staff()
