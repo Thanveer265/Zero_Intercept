@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const api = axios.create({
     baseURL: '/api',
-    timeout: 15000,
+    timeout: 60000,
 });
 
 api.interceptors.response.use(
@@ -59,9 +59,41 @@ export const getFinancialImpact = () => api.get('/financial/impact');
 export const simulateROI = (params) => api.post('/financial/simulate-roi', params);
 
 // Assistant
-export const queryAssistant = (query) => api.post('/assistant/query', { query });
+export const queryAssistant = (query, history = []) => api.post('/assistant/query', { query, history });
 
 // Reports
 export const getReport = () => api.get('/reports/generate');
+
+// Auth
+const authApi = axios.create({
+    baseURL: '/api',
+    timeout: 15000,
+});
+
+authApi.interceptors.response.use(
+    response => response.data,
+    error => {
+        console.error('Auth API Error:', error);
+        return Promise.reject(error);
+    }
+);
+
+export const loginUser = (email, password) =>
+    authApi.post('/auth/login', { email, password });
+
+export const registerUser = (userData, token) =>
+    authApi.post('/auth/register', userData, {
+        headers: { Authorization: `Bearer ${token}` }
+    });
+
+export const getUsers = (token) =>
+    authApi.get('/auth/users', {
+        headers: { Authorization: `Bearer ${token}` }
+    });
+
+export const deleteUser = (userId, token) =>
+    authApi.delete(`/auth/users/${userId}`, {
+        headers: { Authorization: `Bearer ${token}` }
+    });
 
 export default api;

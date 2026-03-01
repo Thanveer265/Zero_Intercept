@@ -119,7 +119,7 @@ export default function Dashboard() {
             <div className={`grid grid-cols-1 md:grid-cols-3 ${SPACING}`}>
                 <KPICard title="Avg Resolution" value={summary?.avg_resolution_time_hrs} unit="hrs" icon={Clock} color="accent" delay={4} />
                 <KPICard title="Resolved Cases" value={summary?.resolved_cases} icon={CheckCircle} color="green" delay={5} />
-                <KPICard title="Resolution Rate" value={summary ? `${((summary.resolved_cases / summary.total_cases) * 100).toFixed(1)}` : 0} unit="%" icon={CheckCircle} color="teal" delay={6} />
+                <KPICard title="Resolution Rate" value={summary?.total_cases ? `${((summary.resolved_cases / summary.total_cases) * 100).toFixed(1)}` : '0'} unit="%" icon={CheckCircle} color="teal" delay={6} />
             </div>
 
             {/* Row 5 — AI Summary (8 cols) + Quick Actions (4 cols) */}

@@ -28,11 +28,17 @@ export default function FloatingAssistant() {
 
     const handleSend = async (query = input) => {
         if (!query.trim()) return;
-        setMessages(prev => [...prev, { role: 'user', content: query }]);
+        const userMsg = { role: 'user', content: query };
+        const updatedMessages = [...messages, userMsg];
+        setMessages(updatedMessages);
         setInput('');
         setLoading(true);
         try {
-            const res = await queryAssistant(query);
+            const history = updatedMessages
+                .filter(m => m.role === 'user' || m.role === 'assistant')
+                .map(m => ({ role: m.role, content: m.content }));
+
+            const res = await queryAssistant(query, history);
             setMessages(prev => [...prev, {
                 role: 'assistant', content: res.response,
                 insight: res.insight, data: res.data,

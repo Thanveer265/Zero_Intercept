@@ -29,7 +29,7 @@
     "explainable_ai": true
   },
   "appearance": {
-    "theme": "dark",
+    "theme": "auto",
     "compact_mode": true,
     "animation_speed": 100,
     "accent_color": "#EC4899"
@@ -38,4 +38,4 @@
     "ip_restriction": false,
     "api_key": "hip-2026-xxxx-xxxx-abcd"
   }
-}}
+}

@@ -1,22 +1,52 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-    Activity, ClipboardList, Brain, Microscope,
-    Target, FileText, Settings
+    // Admin
+    Activity, ClipboardList, Brain, Microscope, Target, FileText, Settings, Users,
+    // Doctor
+    Stethoscope, CalendarDays,
+    // Nurse
+    Heart, UserPlus,
+    // Patient
+    CalendarCheck, User,
+    // Shared
+    LogOut
 } from 'lucide-react';
 
-const navItems = [
-    { path: '/', icon: Activity, label: 'Dashboard', color: '#14B8A6' },
-    { path: '/operations', icon: ClipboardList, label: 'Operations', color: '#0EA5E9' },
-    { path: '/intelligence', icon: Brain, label: 'Intelligence', color: '#A78BFA' },
-    { path: '/simulation', icon: Microscope, label: 'Simulation', color: '#F59E0B' },
-    { path: '/strategy', icon: Target, label: 'Strategy', color: '#EC4899' },
-    { path: '/reports', icon: FileText, label: 'Reports', color: '#10B981' },
-    { path: '/settings', icon: Settings, label: 'Settings', color: '#6B7280' },
+const allNavItems = [
+    // ═══ ADMIN ═══
+    { path: '/', icon: Activity, label: 'Dashboard', color: '#14B8A6', roles: ['admin'] },
+    { path: '/operations', icon: ClipboardList, label: 'Operations', color: '#0EA5E9', roles: ['admin'] },
+    { path: '/intelligence', icon: Brain, label: 'Intelligence', color: '#A78BFA', roles: ['admin'] },
+    { path: '/simulation', icon: Microscope, label: 'Simulation', color: '#F59E0B', roles: ['admin'] },
+    { path: '/strategy', icon: Target, label: 'Strategy', color: '#EC4899', roles: ['admin'] },
+    { path: '/reports', icon: FileText, label: 'Reports', color: '#10B981', roles: ['admin'] },
+    { path: '/settings', icon: Settings, label: 'Settings', color: '#6B7280', roles: ['admin'] },
+    { path: '/admin/users', icon: Users, label: 'Users', color: '#F97316', roles: ['admin'] },
+
+    // ═══ DOCTOR ═══
+    { path: '/', icon: Stethoscope, label: 'Dashboard', color: '#3B82F6', roles: ['doctor'] },
+    { path: '/patient-management', icon: Users, label: 'Patients', color: '#8B5CF6', roles: ['doctor'] },
+    { path: '/appointment-management', icon: CalendarDays, label: 'Appts', color: '#F59E0B', roles: ['doctor'] },
+    { path: '/reports', icon: FileText, label: 'Reports', color: '#10B981', roles: ['doctor'] },
+
+    // ═══ NURSE ═══
+    { path: '/', icon: Heart, label: 'Dashboard', color: '#10B981', roles: ['nurse'] },
+    { path: '/patient-vitals', icon: Activity, label: 'Vitals', color: '#EF4444', roles: ['nurse'] },
+    { path: '/register-patient', icon: UserPlus, label: 'Register', color: '#3B82F6', roles: ['nurse'] },
+    { path: '/reports', icon: FileText, label: 'Reports', color: '#10B981', roles: ['nurse'] },
+
+    // ═══ PATIENT ═══
+    { path: '/', icon: Heart, label: 'My Health', color: '#F59E0B', roles: ['patient'] },
+    { path: '/book-appointment', icon: CalendarCheck, label: 'Book', color: '#3B82F6', roles: ['patient'] },
+    { path: '/profile', icon: User, label: 'Profile', color: '#8B5CF6', roles: ['patient'] },
+    { path: '/reports', icon: FileText, label: 'Reports', color: '#10B981', roles: ['patient'] },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ user, onLogout }) {
     const location = useLocation();
+    const role = user?.role || 'patient';
+    const navItems = allNavItems.filter(item => item.roles.includes(role));
 
     return (
         <nav className="fixed bottom-0 left-0 right-0 z-[100] px-4 pb-4 pointer-events-none">
@@ -24,7 +54,7 @@ export default function Sidebar() {
                 initial={{ y: 60, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="pointer-events-auto mx-auto max-w-3xl rounded-3xl px-2 py-2
+                className="pointer-events-auto mx-auto max-w-2xl rounded-3xl px-3 py-2.5
                     flex items-center justify-between relative overflow-hidden"
                 style={{
                     background: 'linear-gradient(135deg, rgba(4,47,46,0.92) 0%, rgba(10,61,60,0.95) 50%, rgba(13,79,77,0.92) 100%)',
@@ -35,19 +65,18 @@ export default function Sidebar() {
                 {/* Subtle top shine */}
                 <div className="absolute top-0 left-[10%] right-[10%] h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
-                {navItems.map((item) => {
+                {navItems.map((item, idx) => {
                     const isActive = item.path === '/'
                         ? location.pathname === '/'
                         : location.pathname.startsWith(item.path);
 
                     return (
                         <NavLink
-                            key={item.path}
+                            key={item.path + item.label + idx}
                             to={item.path}
                             end={item.path === '/'}
-                            className="relative flex flex-col items-center justify-center flex-1 py-2 cursor-pointer group"
+                            className="relative flex flex-col items-center justify-center flex-1 py-1.5 cursor-pointer group"
                         >
-                            {/* Active background glow */}
                             {isActive && (
                                 <motion.div
                                     layoutId="nav-pill"
@@ -60,7 +89,6 @@ export default function Sidebar() {
                                 />
                             )}
 
-                            {/* Active top dot */}
                             {isActive && (
                                 <motion.div
                                     layoutId="nav-dot"
@@ -73,35 +101,42 @@ export default function Sidebar() {
                                 />
                             )}
 
-                            {/* Icon */}
                             <motion.div
-                                animate={isActive ? { y: -2, scale: 1.15 } : { y: 0, scale: 1 }}
+                                animate={isActive ? { y: -1, scale: 1.1 } : { y: 0, scale: 1 }}
                                 transition={{ type: 'spring', stiffness: 400, damping: 20 }}
                             >
-                                <item.icon
-                                    size={21}
+                                <item.icon size={20}
                                     className="relative z-10 transition-colors duration-300"
                                     style={{ color: isActive ? item.color : 'rgba(255,255,255,0.3)' }}
                                 />
                             </motion.div>
 
-                            {/* Label */}
                             <motion.span
-                                animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0.35, y: 0 }}
+                                animate={isActive ? { opacity: 1 } : { opacity: 0.35 }}
                                 transition={{ duration: 0.25 }}
-                                className="relative z-10 text-[9px] mt-1 font-semibold tracking-tight"
+                                className="relative z-10 text-[9px] mt-0.5 font-semibold tracking-tight"
                                 style={{ color: isActive ? item.color : 'rgba(255,255,255,0.25)' }}
                             >
                                 {item.label}
                             </motion.span>
 
-                            {/* Hover glow (non-active only) */}
                             {!isActive && (
                                 <div className="absolute inset-1 rounded-2xl bg-white/0 group-hover:bg-white/5 transition-colors duration-200" />
                             )}
                         </NavLink>
                     );
                 })}
+
+                {/* Logout */}
+                <button onClick={onLogout}
+                    className="relative flex flex-col items-center justify-center flex-shrink-0 px-2.5 py-1.5 cursor-pointer group"
+                    title={`Logout (${user?.name || 'User'})`}>
+                    <LogOut size={18}
+                        className="relative z-10 text-white/25 group-hover:text-rose-400 transition-colors duration-300" />
+                    <span className="relative z-10 text-[9px] mt-0.5 font-semibold tracking-tight text-white/20 group-hover:text-rose-400 transition-colors">
+                        Logout
+                    </span>
+                </button>
             </motion.div>
         </nav>
     );

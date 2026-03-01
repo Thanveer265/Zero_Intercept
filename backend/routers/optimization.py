@@ -10,7 +10,7 @@ router = APIRouter(prefix="/api/optimization", tags=["Optimization Engine"])
 @router.get("/recommend")
 def optimization_recommendations(db: Session = Depends(get_db)):
     """Generate optimal staffing allocation and resource optimization suggestions."""
-    departments = ["Emergency", "ICU", "Cardiology", "Orthopedics", "Pediatrics", "Neurology"]
+    departments = ["Emergency", "Cardiology", "Orthopedics", "Pediatrics", "Neurology"]
     recommendations = []
 
     total_staff = db.query(func.count(Staff.staff_id)).scalar()

@@ -71,7 +71,7 @@ def financial_impact(db: Session = Depends(get_db)):
     net_impact = -total_losses
 
     # Department breakdown with efficiency
-    departments = ["Emergency", "ICU", "Cardiology", "Orthopedics", "Pediatrics", "Neurology"]
+    departments = ["Emergency", "Cardiology", "Orthopedics", "Pediatrics", "Neurology"]
     dept_costs = []
     for dept in departments:
         dept_staff = db.query(func.count(Staff.staff_id)).filter(Staff.department == dept).scalar()

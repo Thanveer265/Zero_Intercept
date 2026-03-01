@@ -1,12 +1,21 @@
-from fastapi import APIRouter, Depends
-from sqlalchemy.orm import Session
-from sqlalchemy import func
+from fastapi import APIRouter
 from pydantic import BaseModel
 from typing import Optional
-from database import get_db
-from models import Case, Staff
+from pymongo import MongoClient
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 router = APIRouter(prefix="/api/strategic", tags=["Strategic Planning"])
+
+# MongoDB
+MONGO_URI = os.getenv("mongo_db", "")
+client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000) if MONGO_URI else None
+mdb = client["zero_intercept"] if client is not None else None
+
+users_col = mdb["users"] if mdb is not None else None
+bookings_col = mdb["appointment_bookings"] if mdb is not None else None
+wards_col = mdb["wards"] if mdb is not None else None
 
 
 class ScenarioParams(BaseModel):
@@ -20,13 +29,13 @@ class ScenarioParams(BaseModel):
 
 
 @router.post("/simulate")
-def simulate_scenario(params: ScenarioParams, db: Session = Depends(get_db)):
-    """Predict operational stress points under different scenarios."""
-    departments = ["Emergency", "ICU", "Cardiology", "Orthopedics", "Pediatrics", "Neurology"]
+def simulate_scenario(params: ScenarioParams):
+    """Predict operational stress points under different scenarios using real MongoDB data."""
+    departments = ["Emergency", "Cardiology", "Orthopedics", "Pediatrics", "Neurology"]
     if params.department != "all":
         departments = [params.department]
 
-    # Preset multipliers for legacy scenarios
+    # Preset multipliers
     presets = {
         "pandemic": {"case_mult": 2.5, "staff_reduction": 0.2, "sla_pressure": 1.8},
         "surge_30": {"case_mult": 1.3, "staff_reduction": 0.0, "sla_pressure": 1.3},
@@ -44,7 +53,7 @@ def simulate_scenario(params: ScenarioParams, db: Session = Depends(get_db)):
         }
 
     emergency_factor = params.emergency_weight_pct / 20.0  # normalized to 1.0 at 20%
-    shift_factor = 8.0 / max(params.shift_duration_hrs, 4.0)  # shorter shifts = more stress
+    shift_factor = 8.0 / max(params.shift_duration_hrs, 4.0)
 
     results = []
     total_cases_before = 0
@@ -53,18 +62,26 @@ def simulate_scenario(params: ScenarioParams, db: Session = Depends(get_db)):
     total_staff_after = 0
 
     for dept in departments:
-        active = db.query(func.count(Case.case_id)).filter(
-            Case.department == dept, Case.status.in_(["Open", "In Progress"])
-        ).scalar()
-        staff_count = db.query(func.count(Staff.staff_id)).filter(Staff.department == dept).scalar()
-        avg_overtime = db.query(func.avg(Staff.overtime_hours)).filter(Staff.department == dept).scalar() or 0
+        # Get live data from MongoDB
+        staff_count = users_col.count_documents({"department": dept}) if users_col is not None else 1
+        
+        # Determine "active cases" (pending bookings + admitted patients)
+        pending_bk = bookings_col.count_documents({"department": dept, "status": "pending"}) if bookings_col is not None else 0
+        
+        dept_wards = list(wards_col.find({"department": dept})) if wards_col is not None else []
+        occupied = sum(w.get("current_patients", 0) for w in dept_wards)
+        
+        active_cases = pending_bk + occupied
+        
+        # Estimate avg overtime from backlog
+        avg_overtime = max(0, (pending_bk / max(staff_count, 1)) - 2)
 
         # Apply emergency weight boost for Emergency dept
         dept_case_mult = m["case_mult"]
         if dept == "Emergency":
             dept_case_mult *= (1.0 + (emergency_factor - 1.0) * 0.3)
 
-        projected_cases = round(active * dept_case_mult)
+        projected_cases = round(active_cases * dept_case_mult)
         projected_staff = round(staff_count * (1 - m["staff_reduction"]))
         projected_cps = projected_cases / max(projected_staff, 1)
 
@@ -75,14 +92,14 @@ def simulate_scenario(params: ScenarioParams, db: Session = Depends(get_db)):
         required_additional = max(0, round(projected_cases / 8 - projected_staff)) if stress_level > 60 else 0
         impact_score = min(100, round(stress_level * 0.6 + (projected_cps * 5) + (avg_overtime * 1.5)))
 
-        total_cases_before += active
+        total_cases_before += active_cases
         total_cases_after += projected_cases
         total_staff_before += staff_count
         total_staff_after += projected_staff
 
         results.append({
             "department": dept,
-            "current_cases": active,
+            "current_cases": active_cases,
             "projected_cases": projected_cases,
             "current_staff": staff_count,
             "projected_staff": projected_staff,
@@ -118,7 +135,6 @@ def simulate_scenario(params: ScenarioParams, db: Session = Depends(get_db)):
         "custom": "Custom Scenario",
     }
 
-    # AI recommendations
     ai_recommendations = _generate_ai_recommendations(results, overall_risk, sla_breach_prob)
 
     return {

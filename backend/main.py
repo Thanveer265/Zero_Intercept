@@ -6,7 +6,8 @@ from database import engine, Base
 from routers import (
     dashboard, workload, sla, predictive, root_cause,
     digital_twin, simulation, optimization, sentiment,
-    alerts, strategic, financial, assistant, reports, settings
+    alerts, strategic, financial, assistant, reports, settings,
+    auth, patient_api, doctor_api, nurse_api, admin_api, ward_api
 )
 
 # Create tables
@@ -43,6 +44,12 @@ app.include_router(financial.router)
 app.include_router(assistant.router)
 app.include_router(reports.router)
 app.include_router(settings.router)
+app.include_router(auth.router)
+app.include_router(patient_api.router)
+app.include_router(doctor_api.router)
+app.include_router(nurse_api.router)
+app.include_router(admin_api.router)
+app.include_router(ward_api.router)
 
 
 @app.get("/")

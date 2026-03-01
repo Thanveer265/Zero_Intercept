@@ -5,7 +5,7 @@ import { runSimulation } from '../services/api';
 import PageHeader from '../components/PageHeader';
 import ChartCard from '../components/ChartCard';
 
-const DEPARTMENTS = ['Emergency', 'ICU', 'Cardiology', 'Orthopedics', 'Pediatrics', 'Neurology'];
+const DEPARTMENTS = ['Emergency', 'Cardiology', 'Orthopedics', 'Pediatrics', 'Neurology'];
 
 export default function SimulationLab({ embedded }) {
     const [params, setParams] = useState({ department: 'Emergency', add_staff: 2, extend_shift_hours: 0, reallocate_cases: 0 });
