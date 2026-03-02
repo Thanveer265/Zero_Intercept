@@ -7,8 +7,6 @@ An enterprise-grade, AI-powered hospital operations monitoring and strategic dec
 
 ## 🚀 Live Demo
 - **Frontend Vercel Deployment:** [medix.app](https://medix-15sd.vercel.app/)
-- **Backend API Docs (Swagger):** `<your-vercel-backend-url>/docs`
-
 ---
 
 ## 🛠️ Tech Stack
