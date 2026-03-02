@@ -89,7 +89,7 @@ npm run dev
         <img src="https://github.com/Akshaykumar-B.png" width="100px;" alt="Akshaykumar-B"/>
         <br /><sub><b>Akshaykumar-B</b></sub>
       </a>
-      <br />Supporter
+      <br />Team Associate
     </td>
   </tr>
   <tr>
