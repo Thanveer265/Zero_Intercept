@@ -90,7 +90,7 @@ npm run dev
         <img src="https://github.com/Akshaykumar-B.png" width="100px;" alt="Thanveer265"/>
         <br /><sub><b>Akshaykumar-B</b></sub>
       </a>
-      <br /> supporter 
+      <br /> Supporter 
     </td>
     <td align="center">
       <a href="https://github.com/MR-WHOAMEYE">
